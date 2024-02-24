@@ -26,9 +26,9 @@ const JobDetails = () => {
   const [refreshing, setRefreshing] = useState(false);
   const checkData = data.length === 0;
 
-  const onRefresh = useCallback(async () => {
+  const onRefresh = useCallback(() => {
     setRefreshing(true);
-    await refetch();
+    refetch();
     setRefreshing(false);
   },[]);
 
